@@ -76,3 +76,45 @@ print(primeFactors(n))
 
 
 #9
+num = 0
+for i in range(999, 100, - 1):
+    for j in range(i, 100, -1):
+        x = i * j
+        if x > num:
+            s = str(i * j)
+            if s == s[::-1]:
+                num = i * j
+print(num)
+
+
+#10
+
+
+
+#11
+sum_100 = 0
+sum_squared = 0
+for i in range(100):
+    sum_100 += i
+    sum_squared += i ** 2
+print(sum_100 ** 2 - sum_squared)
+
+
+#12
+import math
+def is_prime(num):
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+
+count = 1
+p = 3
+while True:
+    if is_prime(p):
+        count += 1
+        if count == 100001:
+            print(p)
+            break
+    i += 2
